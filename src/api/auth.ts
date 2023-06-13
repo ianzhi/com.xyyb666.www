@@ -37,9 +37,9 @@ export async function getProfile() {
 }
 
 export async function register(
-    username: string, 
-    password: string, 
-    password_confirmation: string, 
+    username: string,
+    password: string,
+    password_confirmation: string,
     code: string,
     captcha: string
 ) {
@@ -86,10 +86,14 @@ export async function sendSMS(phone: string) {
 }
 
 export async function reset(
-    username: string, 
-    password: string, 
-    password_confirmation: string, 
+    username: string,
+    password: string,
+    password_confirmation: string,
     captcha: string
 ) {
     return request.post('/qianmai/v1/reset', { username, password, password_confirmation, captcha })
+}
+
+export async function updateProfile(data: any) {
+    return request.post('/wp/v2/users/me', data)
 }

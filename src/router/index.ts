@@ -15,6 +15,7 @@ import TitleBarLayout from '@/views/layouts/TitleBarLayout.vue'
 import MineRenmai from '@/views/renmai/MineRenmai.vue'
 import RenmaiPeople from '@/views/renmai/RenmaiPeople.vue'
 import UpgradeView from '@/views/UpgradeView.vue'
+import ProfileFormVue from '@/views/ProfileForm.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -134,6 +135,14 @@ const router = createRouter({
             title: '升级'
           },
           component: UpgradeView
+        },
+        {
+          path: '/profile',
+          name: 'profile',
+          meta: {
+            title: '个人信息'
+          },
+          component: ProfileFormVue
         }
       ]
     }

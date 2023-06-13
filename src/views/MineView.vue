@@ -12,7 +12,7 @@
                 <div class="nickname">{{ profile?.name }}</div>
             </div>
             <div class="right">
-                <router-link to="/">设置</router-link>
+                <router-link :to="{ name: 'profile' }">设置</router-link>
             </div>
         </div>
 
